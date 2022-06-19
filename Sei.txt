@@ -1,0 +1,211 @@
+SEI GUIDE : https://docs.seinetwork.io/nodes-and-validators/joining-testnets
+
+38.242.220.160
+PASS : abcdef12
+Monikey name : thonguyen
+  address: sei1lnrcc6w873h4759em8yar2kdcwkxs8sh06v0uq
+  pubkey: '{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"Aydha07q4zz471o0r4Q4tGXsvaSLP2Cs0UVfQLyj3urL"}'
+  mnemonic: ""
+*slide garlic member access sphere fan fiber inherit demand drink crush road excess found flush rescue bar review fall unknown ocean whale bicycle size
+SEI ACCOUNT : sei1lnrcc6w873h4759em8yar2kdcwkxs8sh06v0uq
+VALIDATOR ACCOUNT : seivaloper1lnrcc6w873h4759em8yar2kdcwkxs8sh34apas
+txhash: C1AE1E1411EAD5947087E37C8C8DCF9FF47E63DB7E7E61EE6F4EEC165A503CB7
+discord : thonguyen
+
+
+
+
+https://raw.githubusercontent.com/cosmos-utils/main/utils/go_install.sh")
+
+go1.18.3.linux-amd64.tar.gz
+LỆNH CÀI GO THỦ CÔNG , Ở ĐÂY KO CẦN CHẠY ĐOẠN NÀY MÀ CHẠY TỪ PHẦN 1
+$ sudo apt update
+$  sudo apt install -y make gcc jq curl git
+
+$ if [ ! -f "/usr/local/go/bin/go" ]; then
+  . <(curl -s "https://raw.githubusercontent.com/nodejumper-org/cosmos-utils/main/utils/go_install.sh")
+  . .bash_profile
+fi
+$ go version
+
+1.Tự động cài fullnode
+ # replace nodejumper with your own moniker, if you'd like
+$ . <(curl -s https://raw.githubusercontent.com/nodejumper-org/cosmos-utils/main/installation-scripts/sei-testnet_install.sh) thonguyen
+
+$ sudo journalctl -u seid -f --no-hostname -o cat
+
+2. Tạo Ví
+
+$ seid keys add thonguyen
+
+PASS : abcdef12
+name: thonguyen
+  type: local
+  address: sei1lnrcc6w873h4759em8yar2kdcwkxs8sh06v0uq
+  pubkey: '{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"Aydha07q4zz471o0r4Q4tGXsvaSLP2Cs0UVfQLyj3urL"}'
+  mnemonic: ""
+**slide garlic member access sphere fan fiber inherit demand drink crush road excess found flush rescue bar review fall unknown ocean whale bicycle size
+
+
+recover wallet thì chạy :  $seid keys add thonguyen --recover
+
+show address thì chạy  : $seid keys show YOUR_WALLET_NAME --bech=acc
+
+# name: ....
+#  type: ....
+#  address: sei1j3pzhu2400f4ntv6kznlvramxv62w2d2fa0h5v
+#  pubkey: .....
+#  mnemonic: .....
+
+Vào discord xin faucet : !faucet sei1j3pzhu2400f4ntv6kznlvramxv62w2d2fa0h5v
+
+Kiểm tra balance : $ seid q bank balances sei1j3pzhu2400f4ntv6kznlvramxv62w2d2fa0h5v
+
+## Console output
+#  balances:
+#  - amount: "1000000"
+#    denom: usei
+
+
+*****NẾU TẠO VÍ KO THÀNH CÔNG THÌ PHẢI LÀM NHƯ NÀY ( CHO VPS CONTABO )
+
+*Do disable 1 số tính năng ở Contabo, cần download và khởi tạo chạy như sau, nhập password cho VNC
+
+$ sudo apt install tightvncserver
+$ tightvncserver &&
+
+*Tắt VNC
+
+$ tightvncserver -kill :1
+
+*Thiết lập tham số VNC để remote login
+
+$ vi /root/.vnc/xstartup
+
+Nội dung file /root/.vnc/xstartup sau khi chỉnh sẽ như sau
+
+#!/bin/sh
+xrdb $HOME/.Xresources
+startxfce4 &
+
+*Khởi động VNC
+
+$ chmod +x /root/.vnc/xstartup
+$ tightvncserver &
+
+*Download phần mềm VNCViewer từ Internet và cài đặt, sau đó mở lên. Nhập vào IP của VPS, còn PORT chính là số PID lúc chạy lệnh **tightvncserver** trả về,
+ là 1 (có thể là 2 hoặc 3). Nhập password đã tạo ở bước trên
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e67e0cb9-1ba5-4d42-b895-51fb2f6fb316/Untitled.png)
+
+Sau khi login đc vào VPS, click chuột phải ⇒ Open Terminal, xong cửa sổ lệnh hiện ta
+
+3.Submit form
+
+MONIKEY NAME thì tên NODE đặt ban đầu, còn không chạy lệnh sau ktra :$ seid status 2>&1 | jq .NodeInfo     --->  thonguyen
+
+SEI ACCOUNT thì lệnh sau : $ seid keys show thonguyen --bech=acc        --->  sei1lnrcc6w873h4759em8yar2kdcwkxs8sh06v0uq
+
+VALIDATOR ACCOUNT thì lệnh sau : $ seid keys show thonguyen --bech=val   ---> seivaloper1lnrcc6w873h4759em8yar2kdcwkxs8sh34apas
+
+4.  Kiểm tra node đã đồng bộ xong chưa. Nếu "catching_up” = false là sync xong
+
+$ apt install jq
+$ seid status 2>&1 | jq .SyncInfo
+
+seid status | jq .syncinfo
+
+5. Tạo validator
+
+seid tx staking create-validator \
+--amount=900000usei \
+--pubkey=$(seid tendermint show-validator) \
+--moniker=thonguyen \
+--chain-id=sei-testnet-2 \
+--commission-rate="0.10" \
+--commission-max-rate="0.20" \
+--commission-max-change-rate="0.01" \
+--min-self-delegation=1 \
+--from=sei1lnrcc6w873h4759em8yar2kdcwkxs8sh06v0uq \
+--fees="2000usei"
+
+*Nếu không rõ YOUR_NODE_NAME, chạy lệnh sau ktra : $ seid status 2>&1 | jq .NodeInfo
+*Nếu không rõ YOUR_WALLET_NAME, chạy lệnh sau ktra : $ seid keys list
+*Lưu lại thông tin txh khi lệnh thực hiện xong, sau đó có thể vào web của team để ktra txh hash và tên validator của mình đc tạo
+
+txhash: C1AE1E1411EAD5947087E37C8C8DCF9FF47E63DB7E7E61EE6F4EEC165A503CB7
+
+DƯỚI ĐÂY LÀ CÁC LỆNH THỦ CÔNG ĐỂ THAM KHẢO KHI UPDATE HOẶC TÌM FILE :
+
+#!/bin/bash
+
+. <(curl -s https://raw.githubusercontent.com/nodejumper-org/cosmos-utils/main/utils/logo.sh)
+
+sudo apt update
+sudo apt install -y make gcc jq curl git
+
+if [ ! -f "/usr/local/go/bin/go" ]; then
+  . <(curl -s "https://raw.githubusercontent.com/nodejumper-org/cosmos-utils/main/utils/go_install.sh")
+  . .bash_profile
+fi
+go version # go version goX.XX.X linux/amd64
+
+cd || return
+rm -rf sei-chain
+git clone https://github.com/sei-protocol/sei-chain.git
+cd sei-chain || return
+git checkout 1.0.3beta
+make install
+seid version
+
+# replace nodejumper with your own moniker, if you'd like
+seid config chain-id sei-testnet-2
+seid init "${1:-nodejumper}" --chain-id sei-testnet-2 -o
+
+curl https://raw.githubusercontent.com/sei-protocol/testnet/master/sei-testnet-2/genesis.json > $HOME/.sei/config/genesis.json
+sha256sum $HOME/.sei/config/genesis.json # aec481191276a4c5ada2c3b86ac6c8aad0cea5c4aa6440314470a2217520e2cc
+
+curl https://raw.githubusercontent.com/sei-protocol/testnet/master/sei-testnet-2/addrbook.json > $HOME/.sei/config/addrbook.json
+sha256sum $HOME/.sei/config/addrbook.json # 9058b83fca36c2c09fb2b7c04293382084df0960b4565090c21b65188816ffa6
+
+sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.0001usei"|g' $HOME/.sei/config/app.toml
+seeds=""
+peers="f4b1aa3416073a4493de7889505fc19777326825@rpc1-testnet.nodejumper.io:28656,38b4d78c7d6582fb170f6c19330a7e37e6964212@194.163.189.114:46656,5b5ec09067a5fcaccf75f19b45ab29ce07e0167c@18.118.159.154:26656,b20fa6b0a283e153c446fd58dd1e1ae56b09a65d@159.69.110.238:26656,613f6f5a67c4f0625599ca74b98b7d722f908262@159.65.195.25:36376,1c384cbe9421957813f49865bb8db8c190a90415@139.59.38.171:36376,8b5d1f7d5422e373b00c129ccda14556b69e2a61@167.235.21.137:26656,8c4ec366b5ebd182ffe463e3e1a3a6a345d7d1eb@80.82.215.233:26656,214d45c890cccc09ee725bd101a60dcd690cd554@49.12.215.72:26676,d87dcc1d6b5517b4da9a1ca48717a68ee3bd1d6a@89.163.215.204:26656,fed3ec8e12ddde3fc8e90efc1746e55d10a623f0@65.109.11.114:26656"
+sed -i -e 's|^seeds *=.*|seeds = "'$seeds'"|; s|^persistent_peers *=.*|persistent_peers = "'$peers'"|' $HOME/.sei/config/config.toml
+
+# in case of pruning
+sed -i 's|pruning = "default"|pruning = "custom"|g' $HOME/.sei/config/app.toml
+sed -i 's|pruning-keep-recent = "0"|pruning-keep-recent = "100"|g' $HOME/.sei/config/app.toml
+sed -i 's|pruning-interval = "0"|pruning-interval = "10"|g' $HOME/.sei/config/app.toml
+
+sudo tee /etc/systemd/system/seid.service > /dev/null << EOF
+[Unit]
+Description=Sei Protocol Node
+After=network-online.target
+[Service]
+User=$USER
+ExecStart=$(which seid) start
+Restart=on-failure
+RestartSec=10
+LimitNOFILE=10000
+[Install]
+WantedBy=multi-user.target
+EOF
+
+seid tendermint unsafe-reset-all --home $HOME/.sei --keep-addr-book
+
+SNAP_RPC="http://rpc1-testnet.nodejumper.io:28657"
+LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
+BLOCK_HEIGHT=$((LATEST_HEIGHT - 2000)); \
+TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash)
+
+echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
+
+sed -i -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1true| ; \
+s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\1\"$SNAP_RPC,$SNAP_RPC\"| ; \
+s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\1$BLOCK_HEIGHT| ; \
+s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"|" $HOME/.sei/config/config.toml
+
+sudo systemctl daemon-reload
+sudo systemctl enable seid
+sudo systemctl restart seid
