@@ -116,7 +116,7 @@ sudo journalctl -u seid -f --no-hostname -o cat
 seid status 2>&1 | jq .SyncInfo
 seid status 2>&1 | jq .SyncInfo.catching_up
 ```
-Khi nào sync ---> false thì làm tiếp phần dưới đây 
+When to sync ---> false then continue below
 
 # Create validator
 ```
