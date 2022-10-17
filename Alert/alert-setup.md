@@ -57,5 +57,5 @@ crontab -e -u root
 * * * * *  /bin/bash $HOME/.alert/alert.sh
 ```
 # stop your node , then check mail and telegarm bot
-![image](https://user-images.githubusercontent.com/80441573/196132708-ec2e38a3-3617-4a52-9d43-dbe06edcdf5d.png)
+![image](https://user-images.githubusercontent.com/80441573/196132329-39b36aa0-6110-4e1b-9060-328b708799b6.png)
 ![image](https://user-images.githubusercontent.com/80441573/196133111-394cf582-37d7-4322-a21b-0388915d3b37.png)
