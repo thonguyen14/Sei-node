@@ -26,7 +26,7 @@ sed -i.bak -e "s/\(^127\.0\.0\.1 .*\)/\1 `hostname`/" /etc/hosts
 # Install script of alerting
 ```
 mkdir $HOME/.alert/ && cd $HOME/.alert/
-wget -O alert.sh https://raw.githubusercontent.com/thonguyen14/Cosmos-Alert/main/utilities/alert.sh
+wget -O alert.sh https://raw.githubusercontent.com/thonguyen14/Sei-node/main/Alert/alert.sh
 ```
 
 # Edit alert.sh file following your chain
