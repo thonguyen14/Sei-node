@@ -1,4 +1,4 @@
-###Simple instructions to set up a notification system that sends node information to mail and telegram bot . Take for example Sei
+set up a notification system that sends node information to mail and telegram bot . Take for example Sei
 # Create Telegram bot
 - Using [@BotFather](https://t.me/BotFather) go to /newbot to create your BOT, then store HTTP API of your BOT carefully
 ![image](https://user-images.githubusercontent.com/80441573/194982631-aea4b52c-33fe-475c-b6f5-50f9f6abd06c.png)
