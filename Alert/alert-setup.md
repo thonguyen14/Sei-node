@@ -38,13 +38,13 @@ vi $HOME/.alert/alert.sh
 if alert and your node are in one machine YOUR_RPC="http://127.0.0.1:YOUR_RPC_PORT"
 
 # set YOUR_VAL
-example : YOUR_VAL="haqqvaloper18r3u7a9qvt9xywq5xjw4khnkh4nmy5m3qsjec9"
+example : YOUR_VAL="seivaloper1lnrcc6w873h4759em8yar2kdcwkxs8sh34apas"
 
 # Select a public trusted RPC as standard node to compare
-example : TRUSTED_RPC="https://95.216.155.75:26657"
+example : TRUSTED_RPC="https://sei-testnet-rpc.brocha.in"
 
 # name the alert string
-example : YOUR_NODE_NAME="HAQQ-test"
+example : YOUR_NODE_NAME="SEI-test"
 
 # set your_email 
 example : YOUR_EMAIL="tu99248@gmail.com"
@@ -56,52 +56,3 @@ example : YOUR_EMAIL="tu99248@gmail.com"
 crontab -e -u root
 * * * * *  /bin/bash $HOME/.alert/alert.sh
 ```
-
-- Stop your node, then check alerting on your email
-
-![image](https://user-images.githubusercontent.com/80441573/193543388-037852c3-2ed8-490f-81ab-b5f699663960.png)
-# Install SSMTP for sending mail from Linux
-```
-sudo apt install ssmtp
-sudo apt install sendmail
-sudo apt install sendmail-cf
-sed -i.bak -e "s/\(^127\.0\.0\.1 .*\)/\1 `hostname`/" /etc/hosts
-```
-
-# Install script of alerting
-```
-mkdir $HOME/.alert/ && cd $HOME/.alert/
-wget -O alert.sh https://raw.githubusercontent.com/thonguyen14/Cosmos-Alert/main/utilities/alert.sh
-```
-
-# Edit alert.sh file following your chain
-```
-vi $HOME/.alert/alert.sh
-```
-```
-# If alert script and your node are in different machine, you have to expose your RPC node to public internet. then replace YOUR_RPC="http://YOUR_NODE_IP:YOUR_RPC_PORT"
-if alert and your node are in one machine YOUR_RPC="http://127.0.0.1:YOUR_RPC_PORT"
-
-# set YOUR_VAL
-example : YOUR_VAL="haqqvaloper18r3u7a9qvt9xywq5xjw4khnkh4nmy5m3qsjec9"
-
-# Select a public trusted RPC as standard node to compare
-example : TRUSTED_RPC="https://95.216.155.75:26657"
-
-# name the alert string
-example : YOUR_NODE_NAME="HAQQ-test"
-
-# set your_email 
-example : YOUR_EMAIL="tu99248@gmail.com"
-
-```
-
-# Run crontab as command
-```
-crontab -e -u root
-* * * * *  /bin/bash $HOME/.alert/alert.sh
-```
-
-- Stop your node, then check alerting on your email
-
-
