@@ -47,7 +47,7 @@ example : TRUSTED_RPC="https://sei-testnet-rpc.brocha.in"
 example : YOUR_NODE_NAME="SEI-test"
 
 # set your_email 
-example : YOUR_EMAIL="tu99248@gmail.com"
+example : YOUR_EMAIL="nth100384@gmail.com"
 
 ```
 
