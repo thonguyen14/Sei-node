@@ -11,10 +11,10 @@ for((;;)); do
 
 		sudo systemctl stop seid
 		cd $HOME
-    rm -rf sei-chain
+                rm -rf sei-chain
 		git clone https://github.com/sei-protocol/sei-chain.git
 		cd sei-chain
-    git checkout master; git pull --tags --force; git checkout tags/1.2.3beta && make install
+                git checkout master; git pull --tags --force; git checkout tags/1.2.3beta && make install
 		sudo systemctl restart seid
 
 		for (( timer=60; timer>0; timer-- )); do
