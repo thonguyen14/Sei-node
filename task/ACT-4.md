@@ -1,5 +1,7 @@
+# 1.Place limit order on Vortex
+# 2.Place market order on Vortex  
 thank kj89 and zoia queen#7436 guided
-#  Place multiple orders in one transaction
+# 3. Place multiple orders in one transaction
 ```
 seid keys list
 SEI_ADDR=sei1lnrcc6w873h4759em8yar2kdcwkxs8sh06v0uq
@@ -113,3 +115,7 @@ or
 seid tx broadcast --node https://sei-testnet-rpc.brocha.in:443 $HOME/txs.json 
 ```
 If successful, you will get code = 0
+# 4. Get liquidated on Vortex
+```
+seid tx dex liquidate sei1466nf3zuxpya8q9emxukd7vftaf6h4psr0a07srl5zw74zh84yjqpeheyc YOUR_ADDR --from YOUR_WALLET_NAME --chain-id atlantic-1 --fees 20000usei -y
+```
