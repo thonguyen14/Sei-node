@@ -15,6 +15,7 @@ for((;;)); do
 		git clone https://github.com/sei-protocol/sei-chain.git
 		cd sei-chain
                 git checkout master; git pull --tags --force; git checkout tags/1.2.3beta && make install
+		echo "restart the system..."
 		sudo systemctl restart seid
 
 		for (( timer=60; timer>0; timer-- )); do
