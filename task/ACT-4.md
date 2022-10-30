@@ -106,7 +106,7 @@ seid tx sign $HOME/gen_tx.json -s $seq -a $ACC --offline \
 --from $wallet --chain-id atlantic-1 \
 --output-document $HOME/txs.json
 ```
-# Tx Broadcast
+##Tx Broadcast
 ```
 seid tx broadcast $HOME/txs.json
 ```
