@@ -35,8 +35,8 @@ echo '{
         "contractAddr": "sei1466nf3zuxpya8q9emxukd7vftaf6h4psr0a07srl5zw74zh84yjqpeheyc",
         "funds": [
           {
-            "denom": "uusdc",
-            "amount": "10"
+            "denom": "ust2",
+            "amount": "10000000"
           }
         ]
       },
@@ -62,8 +62,8 @@ echo '{
         "contractAddr": "sei1466nf3zuxpya8q9emxukd7vftaf6h4psr0a07srl5zw74zh84yjqpeheyc",
         "funds": [
           {
-            "denom": "uusdc",
-            "amount": "10"
+            "denom": "ust2",
+            "amount": "10000000"
           }
         ]
       }
