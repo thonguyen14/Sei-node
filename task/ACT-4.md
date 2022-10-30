@@ -77,7 +77,7 @@ seid tx sign $HOME/gen_limit_tx.json -s $seq -a $ACC --offline \
 ```
 ##Tx Broadcast
 ```
-seid tx broadcast --node https://sei-testnet-rpc.brocha.in:443 $HOME/txs.json 
+seid tx broadcast $HOME/txs.json --node https://sei-testnet-rpc.brocha.in:443 
 ```
 
 # 2.Place market order on Vortex 
@@ -197,7 +197,7 @@ seid tx broadcast $HOME/txs.json
 ```
 or 
 ```
-seid tx broadcast --node https://sei-testnet-rpc.brocha.in:443 $HOME/txs.json 
+seid tx broadcast $HOME/txs.json --node https://sei-testnet-rpc.brocha.in:443 
 ```
 If successful, you will get code = 0
 # 4. Get liquidated on Vortex
