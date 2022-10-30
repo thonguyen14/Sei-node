@@ -160,9 +160,8 @@ seid tx sign $HOME/gen_market_tx.json -s $seq -a $ACC --offline \
 ```
 seid tx broadcast $HOME/txsm.json --node https://sei-testnet-rpc.brocha.in:443 
 ```
-
-thank kj89 and zoia queen#7436 guided
 # 3. Place multiple orders in one transaction
+thank kj89 and zoia queen#7436 guided
 ```
 seid keys list
 SEI_ADDR=sei1lnrcc6w873h4759em8yar2kdcwkxs8sh06v0uq
