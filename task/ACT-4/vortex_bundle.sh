@@ -6,7 +6,7 @@ SEI_ADDR=sei1khj89n6epj6e6dl20sa5zh6dv5ec9l2r8u29dq
 wallet=tunguyen
 
 touch $HOME/SEI_ACT4/txh.log
-rm -rf $HOME/SEI_ACT4/limit_tx.json
+rm -rf $HOME/SEI_ACT4/bundle_tx.json
 
 ACC=$(seid q account $SEI_ADDR -o json --node https://sei-testnet-rpc.polkachu.com:443 | jq -r .account_number); sleep 7;
 seq=$(seid q account $SEI_ADDR -o json --node https://sei-testnet-rpc.polkachu.com:443 | jq -r .sequence); sleep 7;
