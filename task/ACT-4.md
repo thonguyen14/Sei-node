@@ -294,8 +294,19 @@ SETUP_PATH=YOUR_PATH_stores_SCRIPTS
 echo "export PATH=$PATH:$YOUR_PATH" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
+example
+```
+SEI_ADDR=sei1lnrcc6w873h4759em8yar2kdcwkxs8sh06v0uq
+wallet=thonguyen
+SETUP_PATH=SEI_ACT4
+echo "export PATH=$PATH:$SEI_ACT4" >> $HOME/.bash_profile
+source $HOME/.bash_profile
+```
 - Download all script files
 ```
+cd /root && mkdir SEI_ACT4
+cd SEI_ACT4
+
 wget -O vortex_limit.sh https://raw.githubusercontent.com/viennguyenbkdn/Sei/main/Atlantic-1/ACT4/vortex_limit.sh && chmod +x vortex_limit.sh
 wget -O vortex_market.sh https://raw.githubusercontent.com/viennguyenbkdn/Sei/main/Atlantic-1/ACT4/vortex_market.sh && chmod +x vortex_market.sh
 wget -O vortex_bundle.sh https://raw.githubusercontent.com/viennguyenbkdn/Sei/main/Atlantic-1/ACT4/vortex_bundle.sh && chmod +x vortex_bundle.sh
