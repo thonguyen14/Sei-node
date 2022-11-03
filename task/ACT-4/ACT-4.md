@@ -47,6 +47,7 @@ sed -i "s|SEI_ACT4$|$SETUP_PATH|g" vortex_bundle.sh
 sed -i "s|SEI_ACT4$|$SETUP_PATH|g" vortex_market.sh
 sed -i "s|SEI_ACT4$|$SETUP_PATH|g" vortex_limit.sh
 ```
+- check the files .sh , json . Once you are sure, run the following command
 - Setup crontab
 ```
 cd
