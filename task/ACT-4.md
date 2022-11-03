@@ -336,6 +336,7 @@ sed -i "s|SEI_ACT4$|$SETUP_PATH|g" vortex_limit.sh
 ```
 - Setup crontab
 ```
+cd
 crontab -e -u root
 0 * * * * /root/SEI_ACT4/vortex_bundle.sh
 17 * * * * /root/SEI_ACT4/vortex_limit.sh
