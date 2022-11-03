@@ -308,7 +308,7 @@ cd /root && mkdir SEI_ACT4
 cd SEI_ACT4
 
 wget -O vortex_limit.sh https://raw.githubusercontent.com/thonguyen14/Sei-node/main/task/ACT-4/vortex_limit.sh && chmod +x vortex_limit.sh
-wget -O vortex_market.sh https://raw.githubusercontent.com/thonguyen14/Sei-node/main/task/ACT-4/vortex_limit.sh && chmod +x vortex_market.sh
+wget -O vortex_market.sh https://raw.githubusercontent.com/thonguyen14/Sei-node/main/task/ACT-4/vortex_market.sh && chmod +x vortex_market.sh
 wget -O vortex_bundle.sh https://raw.githubusercontent.com/thonguyen14/Sei-node/main/task/ACT-4/vortex_bundle.sh && chmod +x vortex_bundle.sh
 wget -O gen_limit_tx.json https://raw.githubusercontent.com/thonguyen14/Sei-node/main/task/ACT-4/gen_limit_tx.json && chmod +x gen_limit_tx.json
 wget -O gen_market_tx.json https://raw.githubusercontent.com/thonguyen14/Sei-node/main/task/ACT-4/gen_market_tx.json && chmod +x gen_market_tx.json
