@@ -13,7 +13,7 @@ seq=$(seid q account $SEI_ADDR -o json --node https://sei-testnet-rpc.polkachu.c
 
 #seid tx sign $HOME/SEI_ACT4/gen_market_tx.json -s $seq -a $ACC --offline --from $wallet --chain-id atlantic-1 --output-document $HOME/SEI_ACT4/market_tx.json --node https://sei-testnet-rpc.polkachu.com:443; sleep 7;
 
-seid tx sign $HOME/SEI_ACT4/gen_market_tx.json -s $seq -a $ACC --offline --from $wallet --chain-id atlantic-1 --output-document $HOME/SEI_ACT4/market_tx.json --node https://sei-testnet-rpc.polkachu.com:443; sleep 10;
+echo abcdef | seid tx sign $HOME/SEI_ACT4/gen_market_tx.json -s $seq -a $ACC --offline --from $wallet --chain-id atlantic-1 --output-document $HOME/SEI_ACT4/market_tx.json --node https://sei-testnet-rpc.polkachu.com:443; sleep 10;
 
 #date -R >> $HOME/SEI_ACT4/txh.log
 echo "Market order:" >> $HOME/SEI_ACT4/txh.log
