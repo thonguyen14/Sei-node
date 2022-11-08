@@ -1,4 +1,34 @@
+# với vps chưa cài sei
 ```
+ git clone https://github.com/sei-protocol/sei-chain.git
+ cd sei-chain
+ git checkout master; git pull --tags --force; git checkout tags/1.2.2beta-postfix && make install
+ SEID_CHAIN="atlantic-1"
+ SEID_MONIKER="vduong"
+ SEID_WALLET="wvduong"
+ seid init $SEID_MONIKER --chain-id $SEID_CHAIN
+ seid config chain-id $SEID_CHAIN
+ seid config keyring-backend test
+ seid keys add $SEID_WALLET
+ seid keys export wvduong --unarmored-hex --unsafe
+ cd
+```
+
+# Đối với vps đã cài sei thành công
+```
+cd $HOME && mkdir $HOME/.sei2
+cp /root/go/bin/seid /root/go/bin/sei2
+sei2d version
+cd .sei2
+sei2d config chain-id atlantic-1 --home $HOME/.sei2
+sei2d init <MONIKER> --chain-id atlantic-1 -o --home $HOME/.sei2
+sei2d config keyring-backend test  --home $HOME/.sei2
+sei2d keys add <WALLET-NAME> --recover --home $HOME/.sei2
+sei2d keys list --home $HOME/.sei2
+sei2d keys export <WALLET-NAME> --unarmored-hex --unsafe --home $HOME/.sei2
+```
+```
+cd
 SEI_ADDR_2=sei1lnrcc6w873h4759em8yar2kdcwkxs8sh06v0uq
 wallet_2=thonguyen
 SETUP_PATH=SEI_ACT4_2
