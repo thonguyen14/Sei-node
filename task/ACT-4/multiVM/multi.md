@@ -42,7 +42,7 @@ cd SEI_ACT4_2
 
 wget -O vortex_limit_vm.sh https://raw.githubusercontent.com/thonguyen14/Sei-node/main/task/ACT-4/multiVM/vortex_limit_vm.sh && chmod +x vortex_limit_vm.sh
 wget -O vortex_bundle_vm.sh https://raw.githubusercontent.com/thonguyen14/Sei-node/main/task/ACT-4/multiVM/vortex_bundle_vm.sh && chmod +x vortex_bundle_vm.sh
-wget -O vortex_market_vm.sh https://github.com/thonguyen14/Sei-node/blob/main/task/ACT-4/multiVM/vortex_market_vm.sh && chmod +x vortex_market_vm.sh
+wget -O vortex_market_vm.sh https://raw.githubusercontent.com/thonguyen14/Sei-node/main/task/ACT-4/multiVM/vortex_market_vm.sh && chmod +x vortex_market_vm.sh
 wget -O gen_limit_tx.json https://raw.githubusercontent.com/thonguyen14/Sei-node/main/task/ACT-4/gen_limit_tx.json && chmod +x gen_limit_tx.json
 wget -O gen_market_tx.json https://raw.githubusercontent.com/thonguyen14/Sei-node/main/task/ACT-4/gen_market_tx.json && chmod +x gen_market_tx.json
 wget -O gen_bundle_tx.json https://raw.githubusercontent.com/thonguyen14/Sei-node/main/task/ACT-4/gen_bundle_tx.json && chmod +x gen_bundle_tx.json
