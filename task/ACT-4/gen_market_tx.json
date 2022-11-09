@@ -10,7 +10,7 @@
             "status": "PLACED",
             "account": "sei1zqgw9lmkdu2ngsxzlze49ewq8e69yxvslcfprt",
             "contractAddr": "sei1466nf3zuxpya8q9emxukd7vftaf6h4psr0a07srl5zw74zh84yjqpeheyc",
-            "price": "13.60000000000000000",
+            "price": "11.20000000000000000",
             "quantity": "0.040000000000000000",
             "priceDenom": "UST2",
             "assetDenom": "ATOM",
@@ -24,7 +24,7 @@
         "funds": [
           {
             "denom": "ust2",
-            "amount": "13600000"
+            "amount": "11200000"
           }
         ]
       }      
@@ -40,7 +40,7 @@
       "amount": [
         {
           "denom": "usei",
-          "amount": "200"
+          "amount": "100"
         }
       ],
       "gas_limit": "0",
