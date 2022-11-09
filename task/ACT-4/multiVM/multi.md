@@ -17,7 +17,7 @@
 # Đối với vps đã cài sei thành công
 ```
 cd $HOME && mkdir $HOME/.sei2
-cp /root/go/bin/seid /root/go/bin/.sei2
+cp /root/go/bin/seid /root/go/bin/sei2d
 sei2d version
 cd .sei2
 sei2d config chain-id atlantic-1 --home $HOME/.sei2
