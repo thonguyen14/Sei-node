@@ -37,12 +37,12 @@
             "status": "PLACED",
             "account": "sei1zqgw9lmkdu2ngsxzlze49ewq8e69yxvslcfprt",
             "contractAddr": "sei1466nf3zuxpya8q9emxukd7vftaf6h4psr0a07srl5zw74zh84yjqpeheyc",
-            "price": "14.000000000000000000",
+            "price": "16.000000000000000000",
             "quantity": "0.050000000000000000",
             "priceDenom": "UST2",
             "assetDenom": "ATOM",
             "orderType": "MARKET",
-            "positionDirection": "LONG",
+            "positionDirection": "SHORT",
             "data": "{\"position_effect\":\"Open\",\"leverage\":\"1\"}",
             "statusDescription": ""
           }
@@ -51,7 +51,7 @@
         "funds": [
           {
             "denom": "ust2",
-            "amount": "14000000"
+            "amount": "16000000"
           }
         ]
       }
@@ -67,7 +67,7 @@
       "amount": [
         {
           "denom": "usei",
-          "amount": "200"
+          "amount": "100"
         }
       ],
       "gas_limit": "0",
