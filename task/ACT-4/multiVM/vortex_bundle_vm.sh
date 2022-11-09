@@ -16,5 +16,5 @@ sei2d tx sign $HOME/SEI_ACT4_2/gen_bundle_tx.json -s $seq_2 -a $ACC_2 --offline 
 
 date -R >> $HOME/SEI_ACT4_2/txh.log;
 echo "Bundled order:" >> $HOME/SEI_ACT4_2/txh.log
-sei2d tx broadcast $HOME/SEI_ACT4_2/bundle_tx.json --node https://sei-testnet-rpc.brocha.in:443 | grep txhash >> $HOME/SEI_ACT4_2/txh.log;
+sei2d tx broadcast $HOME/SEI_ACT4_2/bundle_tx.json --home $HOME/.sei2 --node https://sei-testnet-rpc.brocha.in:443 | grep txhash >> $HOME/SEI_ACT4_2/txh.log;
 sleep 15;
